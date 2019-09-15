@@ -30,7 +30,7 @@
     version: '7.4.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
@@ -46,7 +46,7 @@
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
@@ -57,16 +57,16 @@
 </script>
 
   <meta name="description" content="一个自由的网站">
-<meta name="keywords" content="技术,文学,生活">
+<meta name="keywords" content="自由,民主,法治">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
+<meta property="og:title" content="标签">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="Apple">
 <meta property="og:description" content="一个自由的网站">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-14T13:29:46.000Z">
+<meta property="og:updated_time" content="2019-09-15T15:11:31.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="标签">
 <meta name="twitter:description" content="一个自由的网站">
   <link rel="canonical" href="http://yoursite.com/tags/">
 
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>tags | Apple</title>
+  <title>标签 | Apple</title>
   
 
 
@@ -254,7 +254,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
+<h1 class="post-title" itemprop="name headline">标签
 
 </h1>
 
@@ -270,7 +270,16 @@
       
       <div class="post-body">
         
-          
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+              目前共计 4 个标签
+            </div>
+            <div class="tag-cloud-tags">
+              
+                <a href="/tags/Hexo/" style="font-size: 30px; color: #111">Hexo</a> <a href="/tags/IT学习/" style="font-size: 30px; color: #111">IT学习</a> <a href="/tags/内涵文章/" style="font-size: 12px; color: #ccc">内涵文章</a> <a href="/tags/诗/" style="font-size: 12px; color: #ccc">诗</a>
+              
+            </div>
+          </div>
         
       </div>
       
@@ -338,11 +347,28 @@
     
       
       
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
       <div class="site-state-item site-state-tags">
         
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span>
+          
+            <a href="/tags/">
+          
         
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
       </div>
     
   </nav>
@@ -395,6 +421,7 @@
     
   
   <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
@@ -405,6 +432,30 @@
 
 <script src="/js/next-boot.js?v=7.4.0"></script>
 
+    
+  
+    
+  
+
+  <script>
+  (function() {
+    window.addEventListener('DOMContentLoaded', () => {
+      let script = document.createElement('script');
+      script.src = '/lib/three/three.min.js';
+      document.body.appendChild(script);
+    });
+    let styles = ['', '/lib/three/canvas_lines.min.js', '/lib/three/canvas_sphere.min.js'];
+    window.addEventListener('load', () => {
+      styles.forEach(item => {
+        if (item !== '') {
+          let script = document.createElement('script');
+          script.src = item;
+          document.body.appendChild(script);
+        }
+      });
+    });
+  })();
+  </script>
 
 
   
@@ -435,5 +486,6 @@
 
   
 
+ 
 </body>
 </html>
